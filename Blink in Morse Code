@@ -1,0 +1,165 @@
+String Name;
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  Name = "Tanish";
+  Name.toUpperCase();
+  blinkMorseSet(Name);
+}
+
+void blinkMorseSet(String Name) {
+  for (int i = 0; i < Name.length(); i++) {
+    if (Name[i] == 'A')
+    { dot();
+      dash();
+    }
+    else if (Name[i] == 'B') {
+      dash();
+      dot();
+      dot();
+      dot();
+    }
+    else if (Name[i] == 'C') {
+      dash();
+      dot();
+      dash();
+      dot();
+    }
+    else if (Name[i] == 'D') {
+      dash();
+      dot();
+      dot();
+    }
+    else if (Name[i] == 'E') {
+      dot();
+    }
+    else if (Name[i] == 'F') {
+      dot();
+      dot();
+      dash();
+      dot();
+    }
+    else if (Name[i] == 'G') {
+      dash();
+      dash();
+      dot();
+    }
+    else if (Name[i] == 'H') {
+      dot();
+      dot();
+      dot();
+      dot();
+    }
+    else if (Name[i] == 'I') {
+      dot();
+      dot();
+    }
+    else if (Name[i] == 'J') {
+      dot();
+      dash();
+      dash();
+      dash();
+    }
+    else if (Name[i] == 'K') {
+      dash();
+      dot();
+      dash();
+    }
+    else if (Name[i] == 'L') {
+      dot();
+      dash();
+      dot();
+      dot();
+    }
+    else if (Name[i] == 'M') {
+      dash();
+      dash();
+    }
+    else if (Name[i] == 'N') {
+      dash();
+      dot();
+    }
+    else if (Name[i] == 'O') {
+      dash();
+      dash();
+      dash();
+    }
+    else if (Name[i] == 'P') {
+      dot();
+      dash();
+      dash();
+      dot();
+    }
+    else if (Name[i] == 'Q') {
+      dash();
+      dash();
+      dot();
+      dash();
+    }
+    else if (Name[i] == 'R') {
+      dot();
+      dash();
+      dot();
+    }
+    else if (Name[i] == 'S') {
+      dot();
+      dot();
+      dot();
+    }
+    else if (Name[i] == 'T') {
+      dash();
+    }
+    else if (Name[i] == 'U') {
+      dot();
+      dot();
+      dash();
+    }
+    else if (Name[i] == 'V') {
+      dot();
+      dot();
+      dot();
+      dash();
+    }
+    else if (Name[i] == 'W') {
+      dot();
+      dash();
+      dash();
+    }
+    else if (Name[i] == 'X') {
+      dash();
+      dot();
+      dot();
+      dash();
+    }
+    else if (Name[i] == 'Y') {
+      dash();
+      dot();
+      dash();
+      dash();
+    }
+    else if (Name[i] == 'Z') {
+      dash();
+      dash();
+      dot();
+      dot();
+    }
+  }
+  delay(1000);
+}
+
+
+void dot() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(300);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(100);
+}
+
+void dash() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(900);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(100);
+}
